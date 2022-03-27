@@ -1,0 +1,40 @@
+$black: #272727;
+$gold: #efc58b;
+
+$silver-900: #656565;
+$silver: #c2c2c2;
+$silver-200: #e7e7e7;
+
+@mixin max-w($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+$xl: 1400px;
+$lg: 1200px;
+$md: 992px;
+$sm: 768px;
+$xs: 480px;
+
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+// Использование миксина 
+.class {
+  font-size: 14px;
+  @include line-clamp(3);
+}

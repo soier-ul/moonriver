@@ -1,0 +1,69 @@
+@keyframes arrow {
+  0% {
+    right: 3px;
+  }
+
+  40% {
+    right: 6px;
+  }
+
+  65% {
+    right: 0;
+  }
+
+  80% {
+    right: 2px;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes border-on {
+  0% {
+    bottom: 0;
+  }
+
+  30% {
+    bottom: 24px;
+  }
+
+  45% {
+    width: 130px;
+  }
+
+  60% {
+    width: 100%;
+  }
+
+  100% {
+    bottom: 24px;
+    width: 100%;
+  }
+}
+
+@keyframes border-off {
+  0% {
+    width: 100%;
+    bottom: 24px;
+  }
+
+  30% {
+    bottom: 24px;
+    width: 130px;
+  }
+
+  45% {
+    bottom: 24px;
+    width: 130px;
+  }
+
+  60% {
+    bottom: 0;
+  }
+
+  100% {
+    bottom: 0;
+  }
+}
