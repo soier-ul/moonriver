@@ -376,129 +376,64 @@ svg {
 }
 
 .product-card {
-  min-width: 400px;
+  width: auto;
   width: 100%;
   background-color: #ededed;
-  position: relative;
-
-   @include max-w($xl) {
-     min-width: 0;
-   }
 
   &:hover {
-
     .product-card__img {
       transform: scale(1.015);
     }
   }
 
-  &--big {
-    background-color: transparent;
-
-    @include max-w($xl) {
-      background-color: #ededed;
-    }
-  }
-
-  &--hero {
-    min-width: 210px;
-    width: 210px;
-    background-color: transparent;
-    color: $silver;
-    z-index: 12;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 250px;
-      height: 130px;
-      right: 11px;
-      top: -23px;
-      background-color: $black;
-      border-radius: 0 33px 0 33px;
-      z-index: -1;
-    }
-  }
-
   &__link {
+    width: 100%;
+    height: 275px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 275px;
     overflow: hidden;
-
-    &--big {
-      height: 820px;
-
-      @include max-w($xl) {
-        height: 275px;
-      }
-    }
   }
 
   &__img {
-    height: 275px;
-    width: 322px;
+    width: 260px;
+    height: 260px;
     object-fit: contain;
-    transition: transform 0.7s ease-out;
-
-    &--big {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-    }
-
-    &--hero {
-      position: absolute;
-      top: 45%;
-      right: 37%;
-      transform: translate(37%, -45%);
-    }
+    object-position: center;
+    transition: transform 1.5s ease-in-out;
   }
 
   &__info {
-    padding: 18px 30px 20px;
-    z-index: 0;
+    padding: 20px 30px;
 
-    &--big {
-      position: absolute;
-      padding: 0;
-      bottom: 30px;
-      left: 30px;
-      color: #fff;
-
-      @include max-w($xl) {
-        position: static;
-        padding: 18px 30px 20px;
-      }
-    }
-
-    &--hero {
-      text-align: right;
-      padding: 0;
+    @include max-w($sm) {
+      padding: 20px;
     }
   }
 
   &__title {
-    display: inline-block;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
     margin-bottom: 9px;
+    display: block;
 
     @include max-w($xl) {
       color: $black;
     }
 
-    &:focus {
-      box-shadow: 0 0 0 3px rgba($gold, 0.4);
-    }
+    a {
+      font-weight: 500;
+      font-size: 16px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: $black;
+      display: block;
 
-    &:hover {
-      color: rgba($silver, 0.6);
+      &:focus {
+        box-shadow: 0 0 0 3px rgba($gold, 0.4);
+      }
+
+      &:hover {
+        color: rgba($silver, 0.8);
+      }
     }
 
     &--hero {
@@ -507,26 +442,64 @@ svg {
   }
 
   &__descr {
-    color: #757575;
-    font-size: 18px;
     font-weight: 300;
-    margin-bottom: 9px;
-
-    &--big {
-      color: #fff;
-
-      @include max-w($xl) {
-        color: #757575;
-      }
-    }
+    font-size: 18px;
+    line-height: 1.3;
+    color: #757575;
+    margin-bottom: 8px;
   }
 
   &__price {
-    color: $gold;
-    font-size: 18px;
     font-style: italic;
+    font-size: 18px;
+    line-height: 1.3;
     letter-spacing: 0.03em;
+    color: $gold;
     font-weight: 300;
+  }
+
+  &--hero {
+    background-color: transparent;
+  }
+
+  &--big {
+    width: auto;
+    height: 100%;
+    position: relative;
+
+    .product-card__link {
+      width: 100%;
+      height: 100%;
+    }
+
+    .product-card__img {
+      width: 100%;
+      max-height: 820px;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+
+      @include max-w($sm) {
+        max-height: 400px;
+      }
+    }
+
+    .product-card__info {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .product-card__title {
+      a {
+        color: #fff;
+      }
+    }
+
+    .product-card__descr {
+      color: #fff;
+    }
   }
 }
 

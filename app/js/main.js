@@ -1,6 +1,5 @@
 $(function () {
-
-  // header hide
+  //header hide
   let lastScroll = 0;
   const defaultOffset = 800;
   const header = document.querySelector('.header');
@@ -16,11 +15,12 @@ $(function () {
     }
 
     lastScroll = scrollPosition();
-  })
-  // header hide
+  });
+  //header hide
 
   const swiper = new Swiper('.swiper', {
-    slidesPerView: "auto",
+    slidesPerView: 5.15,
+    loop: true,
     spaceBetween: 25,
     freeMode: true,
 
@@ -42,7 +42,7 @@ $(function () {
       480: {
         slidesPerView: 'auto',
         spaceBetween: 25
-      },
+      }
     }
   });
 
@@ -75,7 +75,6 @@ $(function () {
     offset: 0,
     mobile: true,
     live: true
-  })
+  });
   wow.init();
-
 });

@@ -5,7 +5,6 @@
 @import 'animations';
 @import 'global';
 
-
 .header {
   padding: 40px 0;
   background: linear-gradient(to right, #fff 59%, $black 41%);
@@ -439,6 +438,50 @@
       border-radius: 0 2px 2px 0;
     }
   }
+
+  &__product {
+    max-width: 220px;
+    width: 100%;
+    color: #fff;
+    line-height: 1.3;
+    text-align: right;
+    position: relative;
+    z-index: 12;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 250px;
+      height: 130px;
+      right: 11px;
+      top: -23px;
+      background-color: $black;
+      border-radius: 0 33px 0 33px;
+      z-index: -1;
+    }
+  }
+
+  &__product-title {
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  &__product-descr {
+    font-weight: 300;
+    color: $silver;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  &__product-price {
+    font-weight: 300;
+    font-size: 18px;
+    font-style: italic;
+    color: $gold;
+  }
 }
 
 .gender {
@@ -608,39 +651,44 @@
   &__inner {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
     grid-gap: 20px;
-    height: 820px;
 
-    @include max-w($xl) {
-      grid-gap: 0;
-      height: unset;
+    @include max-w($md) {
+      grid-gap: 15px;
+    }
+
+    @include max-w($sm) {
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      grid-template-columns: unset;
+      grid-gap: unset;
     }
   }
 
   &__item {
-    min-height: 400px;
+
+    &:nth-child(2) {
+      grid-column: span 2;
+      grid-row: span 2;
+
+      @include max-w($sm) {
+        grid-column: unset;
+        grid-row: unset;
+      }
+    }
 
     @include max-w($xl) {
-      margin: 0 10px 20px 10px;
-      width: calc(50% - 20px);
+      grid-column: span 2;
+    }
+
+    @include max-w($sm) {
+      grid-column: unset;
+      margin-bottom: 15px;
 
       &:last-child {
         margin-bottom: 0;
       }
     }
-
-    @include max-w($md) {
-      margin: 0 5px 10px 5px;
-      width: calc(100% - 10px);
-    }
-  }
-
-  &__item:nth-child(3) {
-    grid-column: 2 / 4;
-    grid-row: 1 / 3;
   }
 }
 

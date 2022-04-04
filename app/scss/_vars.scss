@@ -32,9 +32,3 @@ $xs: 480px;
     -webkit-box-orient: vertical;
   }
 }
-
-// Использование миксина 
-.class {
-  font-size: 14px;
-  @include line-clamp(3);
-}
