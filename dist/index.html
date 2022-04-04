@@ -12,7 +12,6 @@
 </head>
 
 <body>
-
   <header class="header">
     <div class="container">
       <nav class="header__inner">
@@ -521,7 +520,6 @@
   </header>
 
   <main class="main">
-
     <section class="hero">
       <div class="container">
         <div class="hero__inner">
@@ -543,9 +541,24 @@
               ru
             </span>
 
-            <article class="product-card product-card--hero">
-              <div class="product-card__info product-card__info--hero">
+            <div class="hero__product">
+              <h3 class="hero__product-title">
+                <a href="#">
+                  кольцо trinity, cartier
+                </a>
+              </h3>
 
+              <p class="hero__product-descr">
+                Белое золото, бриллианты
+              </p>
+
+              <span class="hero__product-price">
+                498 000 ₽
+              </span>
+            </div>
+
+            <!-- <article class="product-card product-card--hero">
+              <div class="product-card__info product-card__info--hero">
                 <a class="product-card__title product-card__title--hero animation" href="#">
                   кольцо trinity, cartier
                 </a>
@@ -560,7 +573,7 @@
                   498 000 <span>₽</span>
                 </span>
               </div>
-            </article>
+            </article> -->
           </div>
         </div>
       </div>
@@ -622,18 +635,19 @@
 
     <section class="products" id="products">
       <ul class="products__inner">
-
         <li class="products__item wow animate__fadeIn">
           <article class="product-card">
             <a class="product-card__link" href="#">
               <img class="product-card__img" src="images/products/ring2.png" width="322" height="170"
                 alt="Кoльцо jow's, Cartier">
             </a>
-            <div class="product-card__info">
 
-              <a class="product-card__title animation" href="#">
-                кольцо jow’s, cartier
-              </a>
+            <div class="product-card__info">
+              <h3 class="product-card__title">
+                <a class="animation" href="#">
+                  кольцо jow's, cartier
+                </a>
+              </h3>
 
               <div class="product-card__descr">
                 <p>
@@ -649,41 +663,18 @@
         </li>
 
         <li class="products__item wow animate__fadeIn">
-          <article class="product-card">
+          <article class="product-card product-card--big">
             <a class="product-card__link" href="#">
-              <img class="product-card__img" src="images/products/ring3.png" width="322" height="170"
-                alt="КОЛЬЦО croix, Cartier">
+              <img class="product-card__img" src="images/products/choker.jpg" alt="кольцо croix, Cartier">
             </a>
             <div class="product-card__info">
-              <a class="product-card__title animation" href="#">
-                кольцо croix, cartier
-              </a>
+              <h3 class="product-card__title">
+                <a class="animation" href="#">
+                  колье etoile, hublot
+                </a>
+              </h3>
 
               <div class="product-card__descr">
-                <p>
-                  Желтое, белое, розовое золото
-                </p>
-              </div>
-
-              <span class="product-card__price">
-                432 000 <span>₽</span>
-              </span>
-            </div>
-          </article>
-        </li>
-
-        <li class="products__item wow animate__fadeIn">
-          <article class="product-card product-card--big">
-            <a class="product-card__link product-card__link--big" href="#">
-              <img class="product-card__img product-card__img--big" src="images/products/choker.jpg"
-                alt="КОЛЬЦО croix, Cartier">
-            </a>
-            <div class="product-card__info product-card__info--big">
-              <a class="product-card__title animation" href="#">
-                колье etoile, hublot
-              </a>
-
-              <div class="product-card__descr product-card__descr--big">
                 <p>
                   Белое золото, бриллианты
                 </p>
@@ -699,13 +690,41 @@
         <li class="products__item wow animate__fadeIn">
           <article class="product-card">
             <a class="product-card__link" href="#">
+              <img class="product-card__img" src="images/products/ring3.png" width="322" height="170"
+                alt="КОЛЬЦО croix, Cartier">
+            </a>
+            <div class="product-card__info">
+              <h3 class="product-card__title">
+                <a class="animation" href="#">
+                  кольцо croix, cartier
+                </a>
+              </h3>
+
+              <div class="product-card__descr">
+                <p>
+                  Желтое, белое, розовое золото
+                </p>
+              </div>
+
+              <span class="product-card__price">
+                432 000 <span>₽</span>
+              </span>
+            </div>
+          </article>
+        </li>
+
+        <li class="products__item wow animate__fadeIn">
+          <article class="product-card">
+            <a class="product-card__link" href="#">
               <img class="product-card__img" src="images/products/earrings.png" width="322" height="170"
                 alt="Серьги moon, hublot">
             </a>
             <div class="product-card__info">
-              <a class="product-card__title animation" href="#">
-                Серьги moon, hublot
-              </a>
+              <h3 class="product-card__title">
+                <a class="animation" href="#">
+                  Серьги moon, hublot
+                </a>
+              </h3>
 
               <div class="product-card__descr">
                 <p>
@@ -727,9 +746,11 @@
                 alt="серьги win, blancpain">
             </a>
             <div class="product-card__info">
-              <a class="product-card__title animation" href="#">
-                серьги win, blancpain
-              </a>
+              <h3 class="product-card__title">
+                <a class="animation" href="#">
+                  серьги win, blancpain
+                </a>
+              </h3>
 
               <div class="product-card__descr">
                 <p>
@@ -743,12 +764,10 @@
             </div>
           </article>
         </li>
-
       </ul>
     </section>
 
     <section class="social-info">
-
       <div class="container">
         <h2 class="social-info__title">
           Мы <br>в социальных сетях
@@ -756,7 +775,6 @@
       </div>
 
       <div class="swiper">
-
         <div class="swiper-wrapper">
           <a class="swiper-slide" href="#">
             <img src="images/slider/3.jpg" alt="Колье на синей коробке moonriver">
@@ -783,24 +801,17 @@
           <a class="swiper-slide" href="#">
             <img src="images/slider/2.jpg" alt="Девушка в черной рубашке">
           </a>
-          <a class="swiper-slide" href="#">
-            <img src="images/slider/6.jpg" alt="золотые серьги">
-          </a>
-          <a class="swiper-slide" href="#">
-            <img src="images/slider/4.jpg" alt="серьги с бриллиантами">
-          </a>
         </div>
 
         <div class="container">
           <div class="social-info__bottom">
-
             <div class="social">
-              <a class="social__link animation" href="#">
+              <a class="social__link animation" href="https://www.facebook.com/">
                 <svg>
                   <use xlink:href="images/sprite.svg#icon-facebook"></use>
                 </svg>
               </a>
-              <a class="social__link animation" href="#">
+              <a class="social__link animation" href="https://www.instagram.com/">
                 <svg>
                   <use xlink:href="images/sprite.svg#icon-instagram"></use>
                 </svg>
@@ -822,12 +833,9 @@
                 </svg>
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
-
     </section>
 
     <div class="news" style="background-image: url(images/bg.jpg);">
@@ -867,7 +875,6 @@
         </div>
       </div>
     </div>
-
   </main>
 
   <footer class="footer">
@@ -945,8 +952,8 @@
     </div>
   </footer>
 
-
   <script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&callback=initMap&v=weekly" async></script>
+
   <script>
     let map;
 
@@ -1127,6 +1134,7 @@
       });
     }
   </script>
+
   <script src="js/main.min.js"></script>
 </body>
 
